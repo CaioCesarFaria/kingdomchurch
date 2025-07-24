@@ -1,0 +1,137 @@
+:root {
+    --amarelo-principal: #FFC801;
+    --branco: #fff;
+    --preto: #000;
+
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #035099;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.container_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  height: 40px;
+}
+.nav_links {
+  display: flex;
+  gap: 2rem;
+  margin-right: 3rem;
+}
+.nav_links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+.menu_toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  justify-content: space-between;
+}
+.menu_toggle span {
+  height: 3px;
+  width: 100%;
+  background: #000;
+  transition: all 0.3s ease;
+}
+.menu_toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu_toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu_toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+@media (max-width: 768px) {
+  .container_header {
+    height: 80px;
+    padding: 0 1rem;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .nav_links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: #035099;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100vw;
+    padding: 1rem 0;
+    gap: 1rem;
+    z-index: 999;
+  }
+
+  .nav_links.active {
+    display: flex;
+  }
+
+  .nav_links a {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.8rem;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    transition: background 0.2s;
+  }
+
+  .nav_links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .menu_toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 24px;
+    gap: 4px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .menu_toggle span {
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .menu_toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(10px);
+  }
+
+  .menu_toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu_toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px);
+  }
+}
