@@ -11,31 +11,36 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
-
+/* !!! ================================================================================= */
+/* !!! ==============================   HEADER         ============================= */
 header {
-  background-color: #035099;
+  background-color:var(--branco);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  height: 120px;
 }
 .container_header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  height: 120px;
 }
 .logo {
-  height: 40px;
+  height: 80px;
 }
 .nav_links {
   display: flex;
   gap: 2rem;
   margin-right: 3rem;
+  
 }
 .nav_links a {
   text-decoration: none;
-  color: #000;
+  color: var(--preto);
   font-weight: 500;
+  font-size: 20px;
 }
 .menu_toggle {
   display: none;
@@ -60,24 +65,121 @@ header {
 .menu_toggle.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+
+/* !!! ================================================================================= */
+/* !!! ==============================   BANNER INICIO         ============================= */
+.container_inicio {
+  display: flex;
+  width: 100%;
+  background-image: url('/assets/banner_inicio_desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.inicio_transparente {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem;
+  margin: 3rem 5rem;
+  width: 45vw;
+  /* Efeito vidro */
+  background: rgba(255, 255, 255, 0.1); /* fundo semi-transparente */
+  backdrop-filter: blur(15px);          /* desfoque atrás */
+  -webkit-backdrop-filter: blur(15px);  /* suporte Safari */
+  border-radius: 16px;                  /* cantos arredondados */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* borda "cristal" */
+}
+.inicio_logo {
+  width: 100px;
+}
+.inicio_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box_treslinhas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 0.5rem;
+  color: var(--branco);
+  
+  
+}
+.linha_texto_inicio {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: bold;
+}
+.linha_texto_inicio span{
+  color: var(--amarelo-principal);
+}
+.box_subtitulo {
+  display: flex;
+}
+.box_subtitulo p {
+  color: var(--preto);
+  font-weight:500;
+  font-size: 22px;
+  text-align: center;
+}
+.inicio_botoes {
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.btn_visitar, .btn_pastor {
+  text-decoration: none;
+  color: var(--preto);
+  font-size: 24px;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 200, 1, 0.7); /* Amarelo com 70% */
+  border-radius: 16px;
+  box-shadow: 2px 7px 4px rgba(0, 0, 0, 0.25); /* sombra do Figma */
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn_visitar:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 10px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn_pastor:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 10px 6px rgba(0, 0, 0, 0.3);
+}
 @media (max-width: 768px) {
+  body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
   .container_header {
-    height: 80px;
+    height: 120px;
     padding: 0 1rem;
   }
 
   nav {
     position: relative;
+    
   }
 
   .nav_links {
     display: none;
     flex-direction: column;
     align-items: center;
-    background: #035099;
-    position: absolute;
-    top: 80px;
+    background:var(--amarelo-principal);
+    position: fixed;
+    top: 120px;
     left: 0;
+    margin: 0;
     width: 100vw;
     padding: 1rem 0;
     gap: 1rem;
@@ -89,7 +191,7 @@ header {
   }
 
   .nav_links a {
-    color: white;
+    color:var(--preto);
     font-size: 1.2rem;
     font-weight: 500;
     padding: 0.8rem;
@@ -97,6 +199,7 @@ header {
     text-align: center;
     background-color: transparent;
     transition: background 0.2s;
+    font-weight: bold;
   }
 
   .nav_links a:hover {
@@ -108,23 +211,23 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30px;
+    width: 40px;
     height: 24px;
-    gap: 4px;
+    gap: 6px;
     cursor: pointer;
     z-index: 1001;
   }
 
   .menu_toggle span {
-    height: 3px;
+    height: 4px;
     width: 100%;
-    background: white;
+    background: var(--preto);
     border-radius: 2px;
     transition: all 0.3s ease;
   }
 
   .menu_toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translateY(10px);
+    transform: rotate(45deg) translateY(14px);
   }
 
   .menu_toggle.active span:nth-child(2) {
@@ -132,6 +235,98 @@ header {
   }
 
   .menu_toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-10px);
+    transform: rotate(-45deg) translateY(-14px);
   }
+
+
+  /* !!! ================================================================================= */
+/* !!! ==============================   BANNER INICIO         ============================= */
+.container_inicio {
+  display: flex;
+  width: 100%;
+  background-image: url('/assets/banner_inicio_mobile.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.inicio_transparente {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  height: max-content;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  margin: 3rem 2rem;
+  width: 80vw;
+  /* Efeito vidro */
+  background: rgba(255, 255, 255, 0.1); /* fundo semi-transparente */
+  backdrop-filter: blur(15px);          /* desfoque atrás */
+  -webkit-backdrop-filter: blur(15px);  /* suporte Safari */
+  border-radius: 16px;                  /* cantos arredondados */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* borda "cristal" */
+}
+.inicio_logo {
+  width: 80px;
+}
+.inicio_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box_treslinhas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 0.3rem;
+  color: var(--branco);
+  
+  
+}
+.linha_texto_inicio {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+}
+.linha_texto_inicio span{
+  color: var(--amarelo-principal);
+}
+.box_subtitulo {
+  display: flex;
+}
+.box_subtitulo p {
+  color: var(--preto);
+  font-weight:500;
+  font-size: 16px;
+  text-align: center;
+}
+.inicio_botoes {
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.btn_visitar, .btn_pastor {
+  text-decoration: none;
+  color: var(--preto);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: rgba(255, 200, 1, 0.7); /* Amarelo com 70% */
+  border-radius: 16px;
+  box-shadow: 2px 7px 4px rgba(0, 0, 0, 0.25); /* sombra do Figma */
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn_visitar:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 10px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn_pastor:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 10px 6px rgba(0, 0, 0, 0.3);
+}
 }

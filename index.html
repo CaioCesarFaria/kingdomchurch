@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://seudominio.com/">
-  <meta property="og:title" content="Título da Página">
-  <meta property="og:description" content="Descrição da página para redes sociais.">
-  <meta property="og:image" content="https://seudominio.com/imagem.jpg">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://seudominio.com/" />
+    <meta property="og:title" content="Título da Página" />
+    <meta
+      property="og:description"
+      content="Descrição da página para redes sociais."
+    />
+    <meta property="og:image" content="https://seudominio.com/imagem.jpg" />
 
-  <title>NOME DO SITE</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
+    <title>Kingdom Church</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
     <!-------------------------------------------------------------->
     <!---------------------    HEADER ------------------------------>
     <header>
       <section class="container_header">
-        <img src="logo.png" alt="Logo" class="logo">
+        <img src="/assets/logo_horizontal.png" alt="Logo" class="logo" />
         <nav>
           <div class="menu_toggle">
             <span></span>
@@ -30,29 +33,55 @@
             <span></span>
           </div>
           <div class="nav_links">
-            <a href="#">Home</a>
-            <a href="#">Home2</a>
-            <a href="#">Home3</a>
-            <a href="#">Home4</a>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Visão e Missão</a>
+            <a href="#">Programação</a>
+            <a href="#">Localização</a>
+            <a href="#">Contribua</a>
+            <a href="#">Contato</a>
           </div>
         </nav>
       </section>
     </header>
     <!-------------------------------------------------------------->
+    <!---------------------    MAIN ------------------------------>
+    <main>
+      <!-- !! ================== CONTAINER INICIO =============== -->
+      <section class="container_inicio">
+        <div class="inicio_transparente">
+          <img src="./assets/logo_3d.png" alt="" class="inicio_logo" />
+          <div class="inicio_box">
+            <div class="box_treslinhas">
+              <p class="linha_texto_inicio">Viva o <span>Reino</span>.</p>
+              <p class="linha_texto_inicio">Experimente a <span>Presença</span>.</p>
+              <p class="linha_texto_inicio">Faça Parte da <span>Kingdom Church</span>.</p>
+            </div>
+            <div class="box_subtitulo">
+              <p class="">
+                Uma família espiritual firmada na Palavra, no amor de Jesus e no
+                poder do Espírito Santo.
+              </p>
+            </div>
+            <div class="inicio_botoes">
+              <a href="https://maps.app.goo.gl/6PbMRaMGuHAUNjNW7" target="_blank" class="btn_visitar">Venha nos visitar</a>
+              <a href="" class="btn_pastor">Fale com um pastor</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-------------------------------------------------------------->
     <!---------------------    FOOTER ------------------------------>
-    <footer>
+    <footer></footer>
 
+    <script>
+      const menuToggle = document.querySelector(".menu_toggle");
+      const navLinks = document.querySelector(".nav_links");
 
-    </footer>
-
-  <script>
-    const menuToggle = document.querySelector('.menu_toggle');
-    const navLinks = document.querySelector('.nav_links');
-    
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      menuToggle.classList.toggle('active');
-    });
-  </script>
-</body>
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+      });
+    </script>
+  </body>
 </html>
