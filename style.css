@@ -27,7 +27,7 @@ header {
   align-items: center;
   height: 120px;
 }
-.logo {
+.logo_header {
   height: 80px;
 }
 .nav_links {
@@ -155,6 +155,71 @@ header {
   transform: translateY(-2px);
   box-shadow: 4px 10px 6px rgba(0, 0, 0, 0.3);
 }
+
+/* !!! ================================================================================= */
+/* !!! ==============================   BANNER DIAGONAL         ============================= */
+/* container pai */
+.container_diagonal {
+  margin-top: 2rem;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* imagem como background total */
+.imagem_fundo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/banner_diagonal.png');
+  background-size: cover; /* <- agora cobre tudo! */
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+/* bloco amarelo com diagonal */
+.bloco_amarelo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 55%;
+  background-color: #ffc801;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+/* conteúdo interno */
+.conteudo_texto {
+  padding: 4rem 4rem 4rem 6rem;
+  color: #000;
+  max-width: 600px;
+  z-index: 3;
+}
+
+.conteudo_texto h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.conteudo_texto h2 span {
+  color: white;
+}
+
+.conteudo_texto p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+
 @media (max-width: 768px) {
   body {
   margin: 0;
@@ -329,4 +394,54 @@ header {
   transform: translateY(-2px);
   box-shadow: 4px 10px 6px rgba(0, 0, 0, 0.3);
 }
+
+  /* !!! ================================================================================= */
+/* !!! ==============================   BANNER DIAGONAL        ============================= */
+/* !!! ==============================   BANNER DIAGONAL MOBILE ============================= */
+
+.container_diagonal {
+  display: flex;
+  flex-direction: column-reverse;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Bloco amarelo com diagonal embaixo */
+.bloco_amarelo {
+  position: relative;
+  width: 100%;
+  background-color: #ffc801;
+  padding: 2rem 0 8rem 0;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  z-index: 2;
+}
+
+/* Texto interno responsivo */
+.conteudo_texto {
+  padding: 0 2.5rem;
+  max-width: 100vw;
+}
+.conteudo_texto h2 {
+  font-size: 26px;
+}
+.conteudo_texto p{
+  line-height: 1.3;
+}
+
+/* Imagem que vai por trás do bloco amarelo */
+.imagem_fundo {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-image: url('./assets/banner_diagonal_mobile.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  margin-top: -60px; /* 💥 sobe a imagem pra ficar atrás da ponta diagonal */
+}
+
+
+
 }
