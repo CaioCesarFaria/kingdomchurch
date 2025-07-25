@@ -219,6 +219,97 @@ header {
   line-height: 1.4;
 }
 
+/* !!! ================================================================================= */
+/* !!! ==============================   BANNER MISSÃO E VISÃO============================ */
+.container_missaoevisao {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.missaoevisao_top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.missaoevisao_logo {
+  width: 150px;
+}
+.missaoevisao_title {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--preto);
+}
+.missaoevisao_boxes {
+  display: flex;
+  padding: 0 1rem;
+  column-gap: 2rem;
+}
+.missao_box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  width: 40vw;
+  background-color: #dadada;
+  border-radius: 16px;
+  padding: 0 0 8rem 0;
+}
+.missao_icone {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: auto;
+  z-index: 1;
+}
+.visao_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  background-color: var(--amarelo-principal);
+  border-radius: 16px;
+  padding: 0 0 8rem 0;
+}
+.visao_icone {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: auto;
+  z-index: 1;
+}
+.missao_title {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--preto);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+}
+.visao_title {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--branco);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.missao_texto {
+  padding: 0 2rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  z-index: 2;
+}
+.visao_texto {
+  padding: 0 2rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+
+
 
 @media (max-width: 768px) {
   body {
