@@ -437,6 +437,101 @@ header {
   margin: 0;
 }
 
+/* !!! ======================== CONTAINER COMO CHEGAR ======================= */
+/* !!! ====================================================================== */
+.container_comochegar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  column-gap: 2rem;
+}
+.comochegar_texto {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.comochegar_titulo {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: var(--fonte-titulo);
+}
+.comochegar_subtitulo {
+  font-size: 18px;
+  font-family: var(--fonte-texto);
+  text-align: center;
+}
+.link_mapa {
+  text-decoration: none;
+  color: var(--preto);
+  font-weight: bold;
+  background-color: var(--amarelo-principal);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.comochegar_imagem {
+  width: 20vw;
+}
+
+/* !!! =========================== CONTAINER FALE CONOSCO ============================== */
+/* !!! ================================================================================= */
+.container_faleconosco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+.faleconosco_info {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+.faleconosco_lista {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.faleconosco_titulo {
+  font-family: var(--fonte-titulo);
+  color: var(--preto);
+  font-size: 28px;
+  font-weight: bold;
+}
+.faleconosco_subtitulo {
+  font-family: var(--fonte-texto);
+  font-size: 18px;
+  margin: 0 3rem 1rem 0;
+}
+.faleconosco_canais {
+  font-family: var(--fonte-titulo);
+  color: var(--preto);
+  font-size: 16px;
+  font-weight: bold;
+}
+.bt_canais {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--preto);
+  column-gap: 1rem;
+  font-family: var(--fonte-texto);
+}
+.bt_canais span{
+  font-weight: bold;
+}
+.bt_canais img{
+  width: 40px;
+}
+.faleconosco_atendente img{
+  width: 30vw;
+}
+
 @media (max-width: 768px) {
   body {
   margin: 0;
@@ -801,7 +896,7 @@ header {
 
 }
 .programacao_titulo {
-  font-size: 22px;
+  font-size: 20px;
   text-transform: uppercase;
   font-weight: bold;
   font-family: var(--fonte-titulo);
@@ -810,9 +905,10 @@ header {
   color: var(--branco);
 }
 .programacao_subtitulo{
-  font-size: 16px;
+  font-size: 14px;
   font-family: var(--fonte-texto);
   margin: 0 1rem;
+  width: 80vw;
 }
 .programacao_boxes {
   display: flex;
@@ -858,5 +954,51 @@ header {
   font-weight: 300;
   font-style: italic;
   margin: 0;
+}
+
+/* !!! ======================== CONTAINER COMO CHEGAR ======================= */
+/* !!! ====================================================================== */
+.container_comochegar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  column-gap: 2rem;
+}
+.comochegar_texto {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.comochegar_titulo {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: var(--fonte-titulo);
+}
+.comochegar_subtitulo {
+  font-size: 18px;
+  font-family: var(--fonte-texto);
+  text-align: center;
+}
+.link_mapa {
+  text-decoration: none;
+  color: var(--preto);
+  font-weight: bold;
+  background-color: var(--amarelo-principal);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.comochegar_imagem {
+  display: none;
+}
+.comochegar_mapa iframe{
+  width: 70vw;
 }
 }
