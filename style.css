@@ -8,7 +8,9 @@
 
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -663,7 +665,159 @@ header {
 .transparencia_imagem img {
   width: 40vw;
 }
+
+/* !! =================================== CONTAINER BIBLIA ============================== */
+/* !! ================================================================================== */
+.container_biblia {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  background-color: var(--amarelo-principal);
+  padding: 2rem 0;
+}
+.biblia_texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3rem;
+  width: 50vw;
+}
+.biblia_versiculo {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: var(--fonte-texto);
+}
+.biblia_subtitulo {
+  font-size: 24px;
+  font-family: var(--fonte-texto);
+}
+.logo_branca {
+  width: 220px;
+}
+.biblia_imagembtn {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+.biblia_imagembtn img {
+  width: 30vw;
+}
+.biblia_botoes {
+  display: flex;
+  column-gap: 1rem;
+}
+.btn_investir {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background: rgba(255, 255, 255, 0.1); /* fundo translúcido */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* sombra preta com opacidade */
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* borda leve */
+}
+
+/* !!! ============================== CONTINER DAYANE FOTO COM MARIDO ================= */
+/* !!! ================================================================================ */
+.container_dayane {
+  position: relative; /* necessário pro before funcionar */
+  display: flex;
+  width: 100vw;
+  align-items: start;
+  justify-content: center;
+  margin-top: 2rem;
+  z-index: 1;
+  column-gap: 2rem;
+}
+
+/* Fundo amarelo em metade da altura */
+.container_dayane::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%; /* metade da altura */
+  background-color: #F4A418; /* amarelo principal */
+  z-index: 0; /* fica atrás do conteúdo */
+}
+
+/* Garantir que o conteúdo fique na frente */
+.container_dayane > * {
+  position: relative;
+  z-index: 2;
+}
+
+.dayane_texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+  row-gap: 6rem;
+}
+.dayane_texto_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dayane_titulo {
+  font-size: 32px;
+  text-transform: uppercase;
+  color: var(--branco);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 40vw;
+  font-weight: bold;
+}
+.dayane_subtitulo {
+  font-size: 24px;
+  color: var(--preto);
+  text-transform: uppercase;
+  width: 40vw;
+}
+.dayane_foto {
+  width: 40vw;
+}
+.dayane_logo {
+  width: 40vw;
+}
+
+/* !!! ================================= FOOTER ========================= */
+/* !!! ================================================================== */
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  align-items: center;
+  column-gap: 3rem;
+  padding: 2rem 0;
+}
+.logo_footer {
+  width: 30vw;
+}
+.menus_footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.menus_footer a{
+  text-decoration: none;
+  color: var(--preto);
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: var(--fonte-titulo);
+}
 @media (max-width: 768px) {
+  html {
+  scroll-behavior: smooth;
+}
   body {
   margin: 0;
   padding: 0;
@@ -1332,5 +1486,160 @@ header {
 }
 .transparencia_imagem img {
   width: 80vw;
+}
+
+/* !! =================================== CONTAINER BIBLIA ============================== */
+/* !! ================================================================================== */
+.container_biblia {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  background-color: var(--amarelo-principal);
+  
+}
+.biblia_texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  
+  
+}
+.biblia_versiculo {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: var(--fonte-texto);
+}
+.biblia_subtitulo {
+  font-size: 18px;
+  font-family: var(--fonte-texto);
+}
+.logo_branca {
+  width: 60vw;
+}
+.biblia_imagembtn {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+.biblia_imagembtn img {
+  width: 50vw;
+}
+.biblia_botoes {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.btn_investir {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background: rgba(255, 255, 255, 0.1); /* fundo translúcido */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* sombra preta com opacidade */
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* borda leve */
+}
+
+/* !!! ============================== CONTINER DAYANE FOTO COM MARIDO ================= */
+/* !!! ================================================================================ */
+.container_dayane {
+  position: relative; /* necessário pro before funcionar */
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  z-index: 1;
+  
+}
+
+/* Fundo amarelo em metade da altura */
+.container_dayane::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%; /* metade da altura */
+  background-color: #F4A418; /* amarelo principal */
+  z-index: 0; /* fica atrás do conteúdo */
+}
+
+/* Garantir que o conteúdo fique na frente */
+.container_dayane > * {
+  position: relative;
+  z-index: 2;
+}
+
+.dayane_texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+.dayane_texto_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dayane_titulo {
+  font-size: 26px;
+  text-transform: uppercase;
+  color: var(--branco);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 80vw;
+  font-weight: bold;
+}
+.dayane_subtitulo {
+  font-size: 18px;
+  color: var(--preto);
+  text-transform: uppercase;
+  width: 80vw;
+}
+.dayane_foto {
+  width: 60vw;
+}
+.dayane_logo {
+  width: 50vw;
+}
+
+/* !!! ================================= FOOTER ========================= */
+/* !!! ================================================================== */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  align-items: center;
+  column-gap: 3rem;
+  padding: 2rem 0;
+}
+.logo_footer {
+  width: 60vw;
+  margin-bottom: 2rem;
+}
+.menus_footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.menus_footer a{
+  text-decoration: none;
+  color: var(--preto);
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: var(--fonte-titulo);
 }
 }

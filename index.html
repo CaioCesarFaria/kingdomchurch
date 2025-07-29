@@ -43,12 +43,12 @@
             <span></span>
           </div>
           <div class="nav_links">
-            <a href="#">Sobre Nós</a>
-            <a href="#">Visão e Missão</a>
-            <a href="#">Programação</a>
-            <a href="#">Localização</a>
-            <a href="#">Contribua</a>
-            <a href="#">Contato</a>
+            <a href="#sobre">Sobre Nós</a>
+            <a href="#visao">Visão e Missão</a>
+            <a href="#programacao">Programação</a>
+            <a href="#localizacao">Localização</a>
+            <a href="#contribua">Contribua</a>
+            <a href="#contato">Contato</a>
           </div>
         </nav>
       </section>
@@ -57,7 +57,7 @@
     <!---------------------    MAIN ------------------------------>
     <main>
       <!-- !! ================== CONTAINER INICIO =============== -->
-      <section class="container_inicio">
+      <section id="contato" class="container_inicio">
         <div class="inicio_transparente">
           <img src="./assets/logo_3d.png" alt="" class="inicio_logo" />
           <div class="inicio_box">
@@ -91,7 +91,7 @@
 
       <!-- !! ================== CONTAINER DIAGONAL =============== -->
 
-      <section class="container_diagonal">
+      <section id="sobre" class="container_diagonal">
         <div class="imagem_fundo"></div>
 
         <div class="bloco_amarelo">
@@ -122,7 +122,7 @@
 
       <!-- !! ================== CONTAINER MISSÃO E VISÃO ========================= -->
       <!-- !! ====================================================================== -->
-      <section class="container_missaoevisao">
+      <section id="visao" class="container_missaoevisao">
         <div class="missaoevisao_top">
           <img src="./assets/logo_3d.png" alt="" class="missaoevisao_logo" />
           <p class="missaoevisao_title">NOSSA MISSÃO E VISÃO</p>
@@ -180,7 +180,7 @@
         </div>
       </section>
 
-      <section class="container_programacao">
+      <section id="programacao" class="container_programacao">
         <img src="./assets/img_jesus.png" alt="" class="programacao_jesus" />
         <div class="programacao_box">
           <p class="programacao_titulo">
@@ -233,7 +233,7 @@
 
       <!-- !! ================== CONTAINER COMO CEGAR     ========================= -->
       <!-- !! ====================================================================== -->
-      <section class="container_comochegar">
+      <section id="localizacao" class="container_comochegar">
         <div class="comochegar_texto">
           <p class="comochegar_titulo">COMO CHEGAR</p>
           <p class="comochegar_subtitulo">
@@ -320,7 +320,7 @@
 
       <!-- !! ========================== CONTAINER CONTRIBUIÇÃO ======================== -->
       <!-- !! ========================================================================= -->
-      <section class="container_contribuicao">
+      <section id="contribua" class="container_contribuicao">
         <div class="contribuicao_texto">
           <p class="contribuicao_titulo">
             Duas formas de contribuir via Zelle:
@@ -370,13 +370,66 @@
           </p>
         </div>
         <div class="transparencia_imagem">
-          <img src="./assets/imagem_transparencia.png" alt="">
+          <img src="./assets/imagem_transparencia.png" alt="" />
+        </div>
+      </section>
+
+      <!-- !! ========================  CONTAINER BIBLIA =============================== -->
+      <!-- !! ========================================================================= -->
+      <section class="container_biblia">
+        <div class="biblia_texto">
+          <p class="biblia_versiculo">
+            “Como crerão naquele de quem não ouviram? E como ouvirão, se não há
+            quem pregue? E como pregarão, se não forem enviados?”
+          </p>
+          <p class="biblia_subtitulo">Romanos 10:14-15</p>
+          <img
+            src="./assets/logo_horizontal_branca.png"
+            class="logo_branca"
+            alt=""
+          />
+        </div>
+        <div class="biblia_imagembtn">
+          <img src="./assets/imagem_amarela.png" alt="" />
+          <div class="biblia_botoes">
+            <a href="" class="btn_investir">QUERO CONTRIBUIR COM A IGREJA</a>
+            <a href="" class="btn_investir">QUERO INVESTIR EM MISSÕES</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- !! ================================== CONTAINER PASTORES ========================== -->
+      <!-- !! =============================================================================== -->
+      <section class="container_dayane">
+        <div class="dayane_imagem">
+          <img src="./assets/imagem_dayane.png" alt="" class="dayane_foto" />
+        </div>
+        <div class="dayane_texto">
+          <img src="./assets/logo_horizontal.png" alt="" class="dayane_logo" />
+          <div class="dayane_texto_box">
+            <p class="dayane_titulo">
+              Cada semente plantada com fé abençoa pessoas, famílias e nações.
+            </p>
+            <p class="dayane_subtitulo">
+              Vem ser Reino com a gente. Todos são bem-vindos.
+            </p>
+          </div>
         </div>
       </section>
     </main>
     <!-------------------------------------------------------------->
     <!---------------------    FOOTER ------------------------------>
-    <footer></footer>
+    <footer>
+      <img src="./assets/logo_horizontal.png" alt="" class="logo_footer" />
+      <div class="menus_footer">
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#visao">Visão e Missão</a>
+        <a href="#programacao">Programação</a>
+        <a href="#localizacao">Localização</a>
+        <a href="#contribua">Contribua</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </footer>
 
     <script>
       const menuToggle = document.querySelector(".menu_toggle");
