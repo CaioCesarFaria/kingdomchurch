@@ -405,17 +405,6 @@
             >
               QUERO CONTRIBUIR COM A IGREJA
             </a>
-            <div
-              id="msgSucesso"
-              style="
-                display: none;
-                color: green;
-                font-weight: bold;
-                margin-top: 10px;
-              "
-            >
-              Código Zelle copiado com sucesso!
-            </div>
 
             <!-- ✅ BOTÃO 2: INVESTIR EM MISSÕES -->
             <a
@@ -425,17 +414,6 @@
             >
               QUERO INVESTIR EM MISSÕES
             </a>
-            <div
-              id="msgMissoes"
-              style="
-                display: none;
-                color: green;
-                font-weight: bold;
-                margin-top: 10px;
-              "
-            >
-              Código de Missões copiado com sucesso!
-            </div>
           </div>
         </div>
       </section>
@@ -482,8 +460,8 @@
         menuToggle.classList.toggle("active");
       });
 
-      function copiarZelle(codigo, idMensagem, event) {
-        event.preventDefault(); // 🛑 impede que a página vá pro topo
+      function copiarZelle(codigo, event) {
+        event.preventDefault(); // impede o link de subir pro topo
 
         const input = document.createElement("input");
         input.value = codigo;
@@ -492,12 +470,7 @@
         document.execCommand("copy");
         document.body.removeChild(input);
 
-        const msg = document.getElementById(idMensagem);
-        msg.style.display = "block";
-
-        setTimeout(() => {
-          msg.style.display = "none";
-        }, 2000);
+        alert("Código Zelle copiado com sucesso!");
       }
     </script>
   </body>
