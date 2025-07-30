@@ -11,11 +11,11 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://kingdomch.com/" />
     <meta property="og:title" content="Kingdom Church" />
+    <meta property="og:description" content="Faça Parte da Kingdom Church!" />
     <meta
-      property="og:description"
-      content="Faça Parte da Kingdom Church!"
+      property="og:image"
+      content="https://kingdomch.com/assets/preview.png"
     />
-    <meta property="og:image" content="https://kingdomch.com/assets/preview.png" />
     <!-- FOONTE UTILIZADA -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -83,7 +83,12 @@
                 class="btn_visitar"
                 >Venha nos visitar</a
               >
-              <a href="https://wa.me/14754496591" class="btn_pastor">Fale com um pastor</a>
+              <a
+                href="https://wa.me/14754496591"
+                target="_blank"
+                class="btn_pastor"
+                >Fale com um pastor</a
+              >
             </div>
           </div>
         </div>
@@ -392,8 +397,39 @@
         <div class="biblia_imagembtn">
           <img src="./assets/imagem_amarela.png" alt="" />
           <div class="biblia_botoes">
-            <a href="" class="btn_investir">QUERO CONTRIBUIR COM A IGREJA</a>
-            <a href="" class="btn_investir">QUERO INVESTIR EM MISSÕES</a>
+            <a href="#" onclick="copiarZelle()" class="btn_investir"
+              >QUERO CONTRIBUIR COM A IGREJA</a
+            >
+            <!-- ✅ MENSAGEM DE CONFIRMAÇÃO -->
+            <div
+              id="msgSucesso"
+              style="
+                display: none;
+                color: green;
+                font-weight: bold;
+                margin-top: 10px;
+              "
+            >
+              Código Zelle copiado com sucesso!
+            </div>
+            <!-- ✅ BOTÃO 2: INVESTIR EM MISSÕES -->
+            <a
+              href="#"
+              onclick="copiarZelle('missoeskingdom@gmail.com', 'msgMissoes')"
+              class="btn_investir"
+              >QUERO INVESTIR EM MISSÕES</a
+            >
+            <div
+              id="msgMissoes"
+              style="
+                display: none;
+                color: green;
+                font-weight: bold;
+                margin-top: 10px;
+              "
+            >
+              Código de Missões copiado com sucesso!
+            </div>
           </div>
         </div>
       </section>
@@ -434,11 +470,27 @@
     <script>
       const menuToggle = document.querySelector(".menu_toggle");
       const navLinks = document.querySelector(".nav_links");
-      
+
       menuToggle.addEventListener("click", () => {
         navLinks.classList.toggle("active");
         menuToggle.classList.toggle("active");
       });
+
+      function copiarZelle(codigo, idMensagem) {
+        const input = document.createElement("input");
+        input.value = codigo;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand("copy");
+        document.body.removeChild(input);
+
+        const msg = document.getElementById(idMensagem);
+        msg.style.display = "block";
+
+        setTimeout(() => {
+          msg.style.display = "none";
+        }, 2000);
+      }
     </script>
   </body>
 </html>
