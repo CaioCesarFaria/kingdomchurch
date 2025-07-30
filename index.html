@@ -397,10 +397,14 @@
         <div class="biblia_imagembtn">
           <img src="./assets/imagem_amarela.png" alt="" />
           <div class="biblia_botoes">
-            <a href="#" onclick="copiarZelle()" class="btn_investir"
-              >QUERO CONTRIBUIR COM A IGREJA</a
+            <!-- ✅ BOTÃO 1: CONTRIBUIR COM A IGREJA -->
+            <a
+              href="#"
+              onclick="copiarZelle('kingdomchurch.rva@gmail.com', 'msgSucesso', event)"
+              class="btn_investir"
             >
-            <!-- ✅ MENSAGEM DE CONFIRMAÇÃO -->
+              QUERO CONTRIBUIR COM A IGREJA
+            </a>
             <div
               id="msgSucesso"
               style="
@@ -412,13 +416,15 @@
             >
               Código Zelle copiado com sucesso!
             </div>
+
             <!-- ✅ BOTÃO 2: INVESTIR EM MISSÕES -->
             <a
               href="#"
-              onclick="copiarZelle('missoeskingdom@gmail.com', 'msgMissoes')"
+              onclick="copiarZelle('missoeskingdom@gmail.com', 'msgMissoes', event)"
               class="btn_investir"
-              >QUERO INVESTIR EM MISSÕES</a
             >
+              QUERO INVESTIR EM MISSÕES
+            </a>
             <div
               id="msgMissoes"
               style="
@@ -476,7 +482,9 @@
         menuToggle.classList.toggle("active");
       });
 
-      function copiarZelle(codigo, idMensagem) {
+      function copiarZelle(codigo, idMensagem, event) {
+        event.preventDefault(); // 🛑 impede que a página vá pro topo
+
         const input = document.createElement("input");
         input.value = codigo;
         document.body.appendChild(input);
